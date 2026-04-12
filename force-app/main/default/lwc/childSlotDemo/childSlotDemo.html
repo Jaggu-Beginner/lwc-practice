@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Setter Parent Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p><strong>What is your name?</strong></p>
+            <div>
+                <slot name="Name"></slot>
+            </div>
+            <p><strong>What is your age?</strong></p>
+            <div>
+                <slot name="Age"></slot>
+            </div>
+        </div>
+        <div slot="footer">
+            <slot name="footer"></slot>
+        </div>
+    </lightning-card>
+</template>

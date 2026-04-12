@@ -1,0 +1,21 @@
+<template>
+    <!-- Simple data communication from parent to child -->
+    <c-p2c-alert-component message="Hurray this the Parent to child Communicaion and the number is a valid number"
+        number=20 is-valid card-heading="Parent To Child Communicaion"></c-p2c-alert-component>
+    <div class="slds-m-bottom_medium"></div>
+    <!-- complex data communication from parent to child -->
+    <c-p2c-carousell-component carousell-details={carouselData}></c-p2c-carousell-component>
+    <div class="slds-m-bottom_medium"></div>
+    <!-- Example of data passing from parent to child component -->
+    <lightning-card title="Parent to child communication on action">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" label="Enter some number" onkeyup={changeHandler}
+                value={percentage}></lightning-input>
+            <div class="slds-m-bottom_medium"></div>
+            <c-p2c-progress-component progress-value={percentage}></c-p2c-progress-component>
+        </div>
+    </lightning-card>
+    <!-- Example Calling Child method from parent component -->
+     <lightning-button variant="brand" label="RESET" onclick={handleClick}></lightning-button>
+     <c-p2c-slider-component></c-p2c-slider-component>
+</template>

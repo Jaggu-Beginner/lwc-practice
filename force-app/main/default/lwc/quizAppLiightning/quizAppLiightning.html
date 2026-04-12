@@ -1,0 +1,69 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-bottom_medium">
+            <form>
+            <template for:each={myQuestions} for:item="quiz">
+                <div key={quiz.id} class="slds-p-around_medium">
+                    <div><strong> {quiz.id} . {quiz.question} </strong></div>
+                    <div class="slds-grid slds-gutters slds-p-around_medium">
+                        <div class="slds-col">
+                            <lightning-input 
+                                type="radio" 
+                                name={quiz.id} 
+                                value="A"
+                                label={quiz.options.A}
+                                onchange={changeHandler}
+                                disabled={isSubmitted}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input 
+                                type="radio" 
+                                name={quiz.id} 
+                                value="B"
+                                label={quiz.options.B}
+                                onchange={changeHandler}
+                                disabled={isSubmitted}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input 
+                                type="radio" 
+                                name={quiz.id} 
+                                value="C"
+                                label={quiz.options.C}
+                                onchange={changeHandler}
+                                disabled={isSubmitted}>
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template lwc:if={isSubmitted}>
+                <div class="slds-notify slds-notify_alert slds-theme_success slds-m-top_medium">
+                    <span class="slds-text-heading_small">
+                        You have scored {score} out of {myQuestions.length}
+                    </span>
+                </div>
+            </template>
+            <div class="slds-align_absolute-center slds-m-top_medium">
+            <lightning-button
+             variant="brand"
+             title="quiz submit"
+             onclick={submitQuiz}
+             label="SUBMIT"
+             disabled={isSubmitDisabled}
+             class="slds-p-around_medium">
+            </lightning-button>
+            <lightning-button
+             variant="brand"
+             title="quiz reset"
+             onclick={resetQuiz}
+             label="RESET"
+             class="slds-p-around_medium">
+            </lightning-button>
+            </div>
+            </form>
+        </div>
+    </lightning-card>
+</template>

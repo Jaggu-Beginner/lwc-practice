@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>descriptionOne</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionOne</shortDescription>
+        <value>This application is built using Lightning Web Components to demonstrate modern Salesforce development practices. It provides a simple and interactive user interface for managing and displaying data efficiently within the Salesforce platform.</value>
+    </labels>
+    <labels>
+        <fullName>descriptionTwo</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>descriptionTwo</shortDescription>
+        <value>The project focuses on improving user experience by leveraging reusable components and clean design. It helps beginners understand how to build scalable applications while following best practices in Salesforce development.</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-m-around_medium">
+            <lightning-button 
+            variant="brand" 
+            label="Show Data" 
+            title="Show Data" 
+            onclick={handleClick}
+            class="slds-m-left_x-small">
+            </lightning-button>
+            <template lwc:if={isVisible}>
+                <div>Welcome to SFDC Grind</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

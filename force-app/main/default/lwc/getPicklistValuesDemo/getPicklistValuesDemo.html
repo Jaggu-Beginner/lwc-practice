@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="getPicklistValues using @wire">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedIndustry}
+            placeholder="Select industry"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+        <div> selectedIndustry is : {selectedIndustry}</div>
+    </lightning-card>
+    <lightning-card title="getTypePicklistValues using @wire">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+            name="Type"
+            label="Type"
+            value={selectedType}
+            placeholder="Select Type"
+            options={typeOptions}
+            onchange={typehandleChange} ></lightning-combobox>
+        </div>
+        <div> selectedType is : {selectedType}</div>
+    </lightning-card>
+</template>

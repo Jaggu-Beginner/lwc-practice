@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="lwc Parent lifecycle hooks">
+        <div class="slds-m-around_medium">
+            <template lwc:if={isChildVisible}>
+            <lightning-button
+            variant="brand"
+            title="Remove child"
+            label="Remove child"
+            onclick={handleChange}>
+            </lightning-button>
+            </template>
+            <template lwc:else> 
+            <lightning-button
+                variant="brand"
+                title="Show child"
+                label="show child"
+                onclick={handleChange}>
+            </lightning-button></template>
+           
+            <template lwc:if={isChildVisible}>
+            <c-life-cycle-child></c-life-cycle-child>
+            </template>
+        </div>
+    </lightning-card>
+</template>

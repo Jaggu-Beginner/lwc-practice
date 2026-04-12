@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Wire services using function">
+        <div class="slds-m-around_medium">
+            <div class="slds-p-around_medium"><strong>Hello from wire services using function!</strong></div>
+            <template if:true={userDetails}>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1"><b>User Details</b></div>
+                    <div class="slds-col slds-size_1-of-1">User Id: {userId}</div>
+                    <div class="slds-col slds-size_1-of-1">Name: {userDetails.Name.value}</div>
+                    <div class="slds-col slds-size_1-of-1">Email: {userDetails.Email.value}</div>
+                    <div class="slds-col slds-size_1-of-1">Username: {userDetails.Username.value}</div>
+                </div>
+            </template>
+
+            <div class="slds-p-around_medium" style="text-align: center;"> {errorMessage} </div>
+        </div>
+    </lightning-card>
+       <lightning-card title="Wire services using Property">
+        <div class="slds-m-around_medium">
+            <div class="slds-p-around_medium"><strong>Hello from wire services using function!</strong></div>
+            <template if:true={userDetailProperty.data}>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1"><b>User Details</b></div>
+                    <div class="slds-col slds-size_1-of-1">User Id: {userId}</div>
+                    <div class="slds-col slds-size_1-of-1">Name: {userDetailProperty.data.fields.Name.value}</div>
+                    <div class="slds-col slds-size_1-of-1">Email: {userDetailProperty.data.fields.Email.value}</div>
+                    <div class="slds-col slds-size_1-of-1">Username: {userDetailProperty.data.fields.Username.value}</div>
+                </div>
+            </template>
+
+            <div class="slds-p-around_medium" style="text-align: center;"> {errorMessage} </div>
+        </div>
+    </lightning-card>
+</template>

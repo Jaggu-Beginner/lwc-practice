@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes, lightning:isUrlAddressable" access="global">
+    <aura:attribute name="id" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:card title="Aura Component">
+        <p style="padding:10px;">
+           Hello I am Aura and my Record Id: {!v.id}
+        </p>
+    </lightning:card>
+
+</aura:component>

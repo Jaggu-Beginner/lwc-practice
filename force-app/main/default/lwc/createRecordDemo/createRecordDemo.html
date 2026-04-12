@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="create Record Demo">
+        <div class="slds-p-around_medium">
+            <form class="createForm">
+                <lightning-combobox label="Salutation" name="Salutation" value={formFields.Salutation}
+                    options={salutationOptions} placeholder="Select Salutation" onchange={changeHandler}>
+                </lightning-combobox>
+                <lightning-input label="First Name" name="FirstName" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Last Name" name="LastName" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Title" name="Title" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Phone" name="Phone" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-input label="Email" name="Email" onchange={changeHandler}
+                    class="slds-m-bottom_x-small"></lightning-input>
+                <lightning-button label="Create Contact" variant="brand" onclick={createContact}></lightning-button>
+            </form>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <!-- Single Object -->
+    <lightning-card title="getObjectInfo using @wire">
+        <div class="slds-p-around_medium">
+            <template lwc:if={objectInfo.data}>
+                <div>
+                    <strong>Default Record Type Id:</strong>
+                    {objectInfo.data.defaultRecordTypeId}
+                </div>
+                <div>
+                    <strong>Object API Name:</strong>
+                    {objectInfo.data.apiName}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+    <!-- Multiple Objects -->
+    <lightning-card title="getObjectInfos using @wire">
+        <div class="slds-p-around_medium">
+
+            <template lwc:if={objectInformation}>
+                <lightning-layout multiple-rows>
+                    <template for:each={objectInformation} for:item="obj">
+                        <lightning-layout-item key={obj.apiName} size="6" class="slds-p-around_small">
+                            <lightning-card title={obj.label}>
+                                <div class="slds-p-around_small">
+                                    <p><strong>API Name:</strong> {obj.apiName}</p>
+                                    <p><strong>Record Type Id:</strong> {obj.defaultRecordTypeId}</p>
+                                </div>
+                            </lightning-card>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+
+            <template lwc:else>
+                <p>Loading...</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

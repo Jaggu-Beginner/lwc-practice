@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/Users/jagadhish/Documents/lwc-practice"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/Users/jagadhish/Documents/lwc-practice"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\Users\\jagadhish\\Documents\\lwc-practice\\.eslintrc.json"
+    }
+  }
+}

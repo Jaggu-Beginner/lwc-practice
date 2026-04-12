@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="getRecordUi using wire">
+        <div class="slds-p-around_medium">
+            <template lwc:if={hasData}>
+                <template for:each={formFields} for:item="field">
+
+                    <div key={field.fieldName} class="slds-grid slds-grid_vertical slds-p-bottom_small">
+
+                        <!-- Label -->
+                        <div class="slds-col slds-text-title_bold">
+                            {field.label}
+                        </div>
+
+                        <!-- Value -->
+                        <div class="slds-col">
+                            {field.value}
+                        </div>
+
+                    </div>
+
+                </template>
+            </template>
+            <template lwc:else>
+                <p>No data available</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

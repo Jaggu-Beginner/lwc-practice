@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Wire Apex with Parameters">
+        <div class="slds-p-around_medium">
+
+            <!-- Combobox -->
+            <lightning-combobox
+                name="type"
+                label="Choose your Type"
+                value={selectedType}
+                options={typeOptions}
+                onchange={typeHandler}
+                class="slds-m-bottom_medium">
+            </lightning-combobox>
+
+            <!-- Error -->
+            <template lwc:if={hasError}>
+                <p class="slds-text-color_error">Error loading data</p>
+            </template>
+
+            <!-- Data -->
+            <template lwc:elseif={hasAccounts}>
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id} class="slds-box slds-m-bottom_small">
+                        <p><strong>Name:</strong> {account.Name}</p>
+                        <p><strong>Type:</strong> {account.Type}</p>
+                        <p><strong>Industry:</strong> {account.Industry}</p>
+                    </div>
+                </template>
+            </template>
+
+            <!-- No Data -->
+            <template lwc:elseif={selectedType}>
+                <p>No records found</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

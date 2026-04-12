@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Navigate to new Contact Record">
+        <div class="slds-var-around_medium">
+            <lightning-button variant="brand" label="Create New Contact" onclick={navigateToRecordPage}></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to new Contact Record with default values">
+        <div class="slds-var-around_medium">
+            <lightning-button variant="brand" label="Creat New Contact with default values" onclick={navigateToTheNewContactPageWithDefaultValues}></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to  Contact recent list view">
+        <div class="slds-var-around_medium">
+            <lightning-button variant="brand" label="Recent list view of Contact" onclick={navigateToContactListView}></lightning-button>
+        </div>
+    </lightning-card>
+    <lightning-card title="Navigate to Files">
+        <div class="slds-var-around_medium">
+            <lightning-button variant="brand" label="Content Files" onclick={navigateToContentFiles}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

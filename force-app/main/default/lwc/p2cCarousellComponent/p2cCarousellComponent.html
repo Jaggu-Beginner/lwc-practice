@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Basic Carousel-images">
+                <lightning-carousel>
+                    <template for:each={carousellDetails} for:item="carousel">
+                        <lightning-carousel-image key={carousel.header} src={carousel.src} header={carousel.header}
+                            description={carousel.description}>
+                        </lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+    </lightning-card>
+</template>
