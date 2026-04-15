@@ -9,4 +9,11 @@ public with sharing class AccountController {
                 FROM Account 
                 WHERE Type = :type];
     }
+     @AuraEnabled(cacheable=true)
+    public static List<Account> findAccounts(String searchKey){
+        string key = '%' + searchKey + '%';
+        return [SELECT Id, Name, Type, Industry 
+                FROM Account 
+                WHERE Name LIKE :key LIMIT 5];
+    }
 }
