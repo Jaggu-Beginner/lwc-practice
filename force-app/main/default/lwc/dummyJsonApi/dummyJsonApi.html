@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="ELECTRONIC PRODUCTS">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Search Products" placeholder="Enter product name..." onkeyup={handleKeyUp}>
+            </lightning-input>
+
+            <lightning-button label="Search" variant="brand" class="slds-m-top_small" onclick={handleSearch}>
+            </lightning-button>
+            <template lwc:if={products}>
+                <div class="slds-grid slds-wrap">
+
+                    <template for:each={products} for:item="product">
+
+                        <div key={product.id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+
+                            <div class="slds-box slds-text-align_center">
+
+                                <img src={product.thumbnail} width="120" />
+
+                                <p><b>{product.title}</b></p>
+                                <p>₹ {product.price}</p>
+
+                                <p style="font-size:12px;">
+                                    {product.description}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </template>
+
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
