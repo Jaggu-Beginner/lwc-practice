@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Maps In Lwc">
+        <div class="slds-box">
+           <template lwc:if={mapMarkers.length}>
+             <lightning-map map-markers={mapMarkers} 
+             markers-title={markersTitle}
+             zoom-level="14" 
+             list-view="visible"
+             onmarkerselect={handleMarkerSelect}
+             selected-marker-value={selectedMarker}>
+            </lightning-map>
+           </template>
+           <template lwc:else>
+            <div>Accounts not found</div>
+           </template>
+        </div>
+    </lightning-card>
+</template>
