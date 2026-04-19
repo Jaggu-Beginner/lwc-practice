@@ -1,0 +1,72 @@
+<template>
+    <div class="container" style="padding:20px; font-family: Arial; font-size:12px; background:lightblue">
+
+        <!-- Header -->
+        <table style="width:100%;">
+            <tr>
+                <td>
+                    <img src={imageUrl} style="height:40px; width:150px;" />
+                </td>
+                <td style="text-align:right;">
+                    <div><strong>Invoice No:</strong> {invoiceData.invoiceNo}</div>
+                    <div><strong>Created:</strong> {invoiceData.invoiceCreated}</div>
+                    <div><strong>Due:</strong> {invoiceData.invoiceDue}</div>
+                </td>
+            </tr>
+        </table>
+
+        <br/><br/>
+
+        <!-- Company + Client -->
+        <table style="width:100%;">
+            <tr>
+                <td>
+                    <div><strong>{invoiceData.companyName}</strong></div>
+                    <div>{invoiceData.address1}</div>
+                    <div>{invoiceData.address2}</div>
+                </td>
+                <td style="text-align:right;">
+                    <div><strong>{clientData.client}</strong></div>
+                    <div>{clientData.username}</div>
+                    <div>{clientData.email}</div>
+                </td>
+            </tr>
+        </table>
+
+        <br/><br/>
+
+        <!-- Services Table -->
+        <table style="width:100%; border-collapse: collapse; border:1px solid #ccc;">
+            <tr style="background:#eee;">
+                <th style="text-align:left; padding:8px; border:1px solid #ccc;">Service</th>
+                <th style="text-align:right; padding:8px; border:1px solid #ccc;">Amount</th>
+            </tr>
+
+            <template for:each={services} for:item="service">
+                <tr key={service.name}>
+                    <td style="padding:8px; border:1px solid #ccc;">
+                        {service.name}
+                    </td>
+                    <td style="padding:8px; text-align:right; border:1px solid #ccc;">
+                        ${service.amount}
+                    </td>
+                </tr>
+            </template>
+        </table>
+
+        <br/>
+
+        <!-- Total -->
+        <table style="width:100%;">
+            <tr>
+                <td></td>
+                <td style="text-align:right; padding:8px;">
+                    <strong>Total Amount: ${totalAmount}</strong>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <lightning-button label="Generate PDF" onclick={pdfHandler}></lightning-button>
+</template>

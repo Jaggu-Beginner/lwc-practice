@@ -1,0 +1,7 @@
+<apex:page controller="pdfVfPageController" 
+           renderAs="pdf" 
+           showHeader="false">
+
+    <apex:outputText value="{!pdfText}" escape="false"/>
+
+</apex:page>
