@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="FILTERING AND SORTING CONTACTS">
+        <div class="slds-p-around_medium table-container">
+            <lightning-layout>
+                 <lightning-layout-item size="2" padding="around-small">
+                    <lightning-combobox
+                    name="filterBy" value={filterBy}
+                    label="Filter By"
+                    options={fileteByOptions} onchange={filterByHandler}></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="4" padding="around-small">
+                    <lightning-input type="text" label="Filter" onkeyup={filterHandler}>
+                    </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" alignment-bump="left" padding="around-small">
+                    <lightning-combobox
+                    name="sortedBy" value={sortedBy}
+                    label="Sort By"
+                    options={fileteByOptions} onchange={sortHandler}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+                <table>
+                    <thead>
+                        <tr>
+                            <template for:each={tableHeadings} for:item="heading">
+                                <th key={heading}> {heading} </th>
+                            </template>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={filteredData} for:item="data">
+                            <tr key={data.Id}>
+                                <td> {data.Id} </td>
+                                <td> {data.Name} </td>
+                                <td> {data.Email} </td>
+                                <td> {data.Phone} </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+        </div>
+    </lightning-card>
+</template>

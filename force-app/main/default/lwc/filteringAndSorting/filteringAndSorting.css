@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+/* Header styling */
+th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Table cells */
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    word-break: break-word;
+}
+
+/* Zebra rows */
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #e6f2ff;
+    cursor: pointer;
+}
+
+/* Make table scrollable in small region */
+.table-container {
+    overflow-x: auto;
+}
