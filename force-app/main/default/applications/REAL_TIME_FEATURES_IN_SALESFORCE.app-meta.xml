@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>Gemini_Generated_Image_3qbl173qbl17</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>This is about the real time features of the salesforce.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>REAL TIME FEATURES IN SALESFORCE</label>
+    <navType>Standard</navType>
+    <tabs>MAPS_IN_LWC</tabs>
+    <tabs>FILTERING_AND_SORTING</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>REAL_TIME_FEATURES_IN_SALESFORCE_UtilityBar</utilityBar>
+</CustomApplication>

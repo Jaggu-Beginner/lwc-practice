@@ -19,15 +19,23 @@ export default class FilteringAndSorting extends LightningElement {
         if (data) {
             console.log(data);
             this.fullTableData = data;
-            this.filteredData = data;
+            this.filteredData = [...this.sortBy(data)];
         }
         if (error) {
             console.error(error);
         }
     }
-    get fileteByOptions() {
+    get filterByOptions() {
         return [
             { label: "All", value: "All" },
+            { label: "Id", value: "Id" },
+            { label: "Name", value: "Name" },
+            { label: "Email", value: "Email" },
+            { label: "Phone", value: "Phone" }
+        ]
+    }
+    get sortByOptions() {
+        return [
             { label: "Id", value: "Id" },
             { label: "Name", value: "Name" },
             { label: "Email", value: "Email" },

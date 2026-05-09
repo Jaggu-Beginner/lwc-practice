@@ -80,4 +80,8 @@
         <name>Zero_To_Hero_In_LWC</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>REAL_TIME_FEATURES_IN_SALESFORCE</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>
